@@ -1,0 +1,51 @@
+{
+  "title": "خوش آمدید",
+  "description": "برای ورود نام کاربری و پسورد خود را وارد نمایید",
+  "fields": [
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "نام کاربری",
+      "name": "username",
+      "placeholder": "نام کاربری را وارد کنید",
+      "required": true,
+      "rowIndex": 0,
+      "type": "text",
+      "value": "",
+      "variant": "Input",
+      "min": 3,
+      "max": 32
+    },
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "رمز عبور",
+      "name": "password",
+      "placeholder": "رمز عبور را وارد کنید",
+      "required": true,
+      "rowIndex": 0,
+      "type": "",
+      "value": "",
+      "variant": "Password",
+      "min": 8,
+      "max": 128
+    }
+  ],
+  "buttons": [
+    {
+      "checked": true,
+      "description": "ورود",
+      "disabled": false,
+      "label": "ورود",
+      "name": "login",
+      "placeholder": "",
+      "required": true,
+      "rowIndex": 0,
+      "type": "submit",
+      "value": "",
+      "variant": "Button"
+    }
+  ]
+}

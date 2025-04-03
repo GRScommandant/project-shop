@@ -1,0 +1,96 @@
+{
+  "title":"ثبت نام",
+  "description": "برای ثبت نام فیلد های زیر را پر کنید",
+  "fields": [
+      {
+        "checked": true,
+        "description": "",
+        "disabled": false,
+        "label": "نام",
+        "name": "نام",
+        "placeholder": "نام",
+        "required": true,
+        "rowIndex": 0,
+        "type": "text",
+        "value": "Firstname",
+        "variant": "Input",
+        "min": 2,
+        "max": 23
+
+      }
+    ,
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "نام خانوادگی",
+      "name": "نام خانوادگی",
+      "placeholder": "نام خانوادگی",
+      "required": true,
+      "rowIndex": 0,
+      "type": "text",
+      "value": "Lastname",
+      "variant": "Input"
+    },
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "نام کاربری",
+      "name": "نام کاربری",
+      "placeholder": "نام کاربری",
+      "required": true,
+      "rowIndex": 0,
+      "type": "text",
+      "value": "Username",
+      "variant": "Input",
+      "min": 2,
+      "max": 23
+    },
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "رمز عبور",
+      "name": "رمز عبور",
+      "placeholder": "رمز عبور",
+      "required": true,
+      "rowIndex": 0,
+      "type": "",
+      "value": "password",
+      "variant": "Password",
+      "min": 2,
+      "max": 23
+    },
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "ایمیل",
+      "name": "ایمیل",
+      "placeholder": "ایمیل",
+      "required": true,
+      "rowIndex": 0,
+      "type": "",
+      "value": "email",
+      "variant": "Input",
+      "min": 2,
+      "max": 23
+    }
+  ],
+  "buttons": [
+    {
+      "checked": true,
+      "description": "",
+      "disabled": false,
+      "label": "ثبت نام",
+      "name": "ثبت نام",
+      "placeholder": "",
+      "required": true,
+      "rowIndex": 0,
+      "type": "submit",
+      "value": "",
+      "variant": "Button"
+    }
+  ]
+}
