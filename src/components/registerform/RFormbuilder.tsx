@@ -15,6 +15,9 @@ import {
 } from "@/components/ui/form";
 import { PasswordInput } from "@/components/ui/password-input";
 import { FormFieldType, FormType } from "@/components/registerform/RFormCard";
+import {Alert} from '@/components/ui/Alert'
+import {useState} from "react";
+import { useRouter } from 'next/navigation'
 
 type FormBuilderProps = {
     form: FormType,
@@ -23,6 +26,7 @@ type FormBuilderProps = {
 }
 
 export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
+    const router = useRouter()
     const Rform_schema = z.object(
         form_config.fields.reduce((acc, field) => {
             let schema: z.ZodType<any>;
@@ -90,18 +94,26 @@ export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
     const form = useForm<z.infer<typeof Rform_schema>>({
         resolver: zodResolver(Rform_schema)
     });
-
+    const [AlertV , setAlertV ] = useState(false)
     function onSubmit(values: z.infer<typeof Rform_schema>) {
         try {
             console.log(values);
+            setAlertV(true)
+            setTimeout(() => {
+                router.push('/');
+            }, 1500);
+
         } catch (error) {
             console.error("دچار اختلال شده است");
+
         }
     }
 
     return (
+
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10">
+            {AlertV && <Alert variant={"successful"}>ثبت نام شما با موفیت انجام شد</Alert>}
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 max-w-3xl mx-auto py-10">
                 {(form_config.fields as FormFieldType[]).map((f, key) => {
                     let Field;
                     switch (f.type) {
@@ -117,16 +129,16 @@ export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
                             control={form.control}
                             name={f.name}
                             render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>{f.label}</FormLabel>
-                                    <FormControl>
+                                <FormItem className="space-y-0">
+                                    <FormLabel className="space-y-0">{f.label}</FormLabel>
+                                    <FormControl className="space-y-0">
                                         <Field
                                             placeholder={f.placeholder}
                                             type={f.type}
                                             {...field}
                                         />
                                     </FormControl>
-                                    <FormDescription>{f.description}</FormDescription>
+                                    <FormDescription className="space-y-0">{f.description}</FormDescription>
                                     <FormMessage />
                                 </FormItem>
                             )}
@@ -140,6 +152,7 @@ export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
                         </Button>
                     </div>
                 ))}
+
             </form>
         </Form>
     );

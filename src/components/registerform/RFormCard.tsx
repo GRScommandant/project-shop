@@ -57,7 +57,7 @@ type FormCardProps = {
 
 export default function FormCard({form, className}: FormCardProps) {
     return (
-        <div className={cn("flex flex-col items-center justify-center mt-[10rem]", className)}>
+        <div className={cn("flex flex-col items-center justify-center mt-[5rem]", className)}>
             <Card className={"w-[350px]"}>
                 <CardHeader>
                     <CardTitle>{form.title}</CardTitle>

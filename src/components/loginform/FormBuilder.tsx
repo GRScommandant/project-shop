@@ -89,6 +89,9 @@ import {PasswordInput} from "@/components/ui/password-input"
 // import {  Rating} form "@/components/ui/rating"
 ///////////
 import {FormFieldType, FormType} from "@/components/loginform/FormCard";
+import {useRouter} from "next/navigation";
+import {Alert} from "@/components/ui/Alert";
+import {useState} from "react";
 
 // const formSchema = z.object({
 //     username: z.string().min(3).max(32),
@@ -102,6 +105,7 @@ type FormBuilderProps = {
 }
 
 export default function FormBuilder({form: form_config}: FormBuilderProps) {
+    const router = useRouter()
 
     const formSchema = z.object(
         form_config.fields.reduce((acc, field) => {
@@ -154,19 +158,24 @@ export default function FormBuilder({form: form_config}: FormBuilderProps) {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
     })
-
+    const [AlertV , setAlertV ] = useState(false)
     function onSubmit(values: z.infer<typeof formSchema>) {
         try {
             console.log(values);
+            setAlertV(true)
+            setTimeout(() => {
+                router.push('/');
+            }, 1500);
 
         } catch (error) {
-            console.error("Form submission error", error);
+            console.error("دچار اختلال شده است");
 
         }
     }
 
     return (
         <Form {...form}>
+            {AlertV && <Alert variant={"successful"}>خوش آمدید</Alert>}
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10">
 
 
