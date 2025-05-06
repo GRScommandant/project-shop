@@ -6,12 +6,11 @@ export type RouteType = {
 	href : string;
 	label: string;
 	icon?: any;
-
 	hidden?: boolean;
 };
 
 export const siteConfig = {
-    name: 'nabeghe-yab',
+    name: 'hardware shop',
     description: '',
     ROUTE: {
         login: {
@@ -32,6 +31,11 @@ export const siteConfig = {
         home: {
             label:'خانه',
             href:'/',
+            icon:null
+        },
+        shop :{
+            label:'فروشگاه',
+            href:'/shop',
             icon:null
         }
     }
