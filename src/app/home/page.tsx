@@ -25,7 +25,7 @@ export default function Homepage() {
             <Particles className="w-[100%] h-[100%]" />
             <div className="absolute flex flex-col items-start justify-center mr-[60px] w-[700px]">
                 <BoxReveal >
-                    <h1 className='text-6xl font-bold'>هارد ور شاپ</h1>
+                    <h1 className='text-6xl font-bold py-2'>هارد ور شاپ</h1>
                 </BoxReveal>
                 <br/>
                 <BoxReveal>
@@ -55,7 +55,7 @@ export default function Homepage() {
             <div className="flex flex-col items-center justify-center w-[100%] h-[920px] z-1 relative sticky">
                 <DotPattern className={cn("[mask-image:radial-gradient(300px_circle_at_center,white,transparent)])")}/>
                 <div className="absolute flex flex-col items-center justify-center mr-[60px] w-[700px]">
-                    <TextAnimate animation="fadeIn" by="word" once className="text-6xl font-bold mb-[60px]">
+                    <TextAnimate animation="fadeIn" by="word" once className="text-5xl font-bold mb-[60px]">
                         مارا در فضای مجازی دنبال کنید
                     </TextAnimate>
                     <div className="flex flex-row-reverse items-center justify-center gap-5">

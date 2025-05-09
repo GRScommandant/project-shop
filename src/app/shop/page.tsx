@@ -1,17 +1,21 @@
 import ProductBuilder from "@/components/poductshowcase/productbuilder";
-export default function Shop () {
+import Searchfilters from "@/components/filterss/searchfilters";
+import {Separator} from "@/components/ui/separator";
 
-return (
-    <>
-      <div className="flex flex-row w-[100%]">
-        <div className="flex flex-col items-end w-[90%]">
-            <ProductBuilder/>
-        </div>
-        <div className="flex flex-col items-start w-[10%]">
-            <p>hello</p>
-        </div>
-      </div>
-    </>
-)
-
+export default function Shop() {
+    return (
+        <>
+            <div className="flex flex-row-reverse w-full">
+                <div className="flex flex-col items-end w-[85%] ">
+                    <ProductBuilder />
+                </div>
+                <div className="flex flex-col items-start w-[15%] mt-3">
+                    <div className="flex flex-col items-center justify-center w-full">
+                        <Separator className="my-1"/>
+                    </div>
+                    <Searchfilters />
+                </div>
+            </div>
+        </>
+    );
 }
