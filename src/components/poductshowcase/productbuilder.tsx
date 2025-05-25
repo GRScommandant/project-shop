@@ -5,6 +5,10 @@ import products from '../../form/product.json';
 import React, { useState } from "react";
 import SearchBar from "@/components/search/searchbar";
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import Link from "next/link";
+import siteConfig from "@/config";
+
+
 
 interface Product {
     name: string;
@@ -19,8 +23,8 @@ interface Product {
 const ProductList: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState<string>("");
     const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
-    const [currentPage, setCurrentPage] = useState<number>(1); // State for current page
-    const itemsPerPage = 20; // Number of items per page
+    const [currentPage, setCurrentPage ] = useState<number>(1); // State for current page
+    const itemsPerPage = 5; // Number of items per page
 
     const productList: Product[] = products;
 
@@ -29,15 +33,15 @@ const ProductList: React.FC = () => {
             product.name.toLowerCase().includes(searchQuery.toLowerCase())
         );
         setFilteredProducts(results);
-        setCurrentPage(1); // Reset to the first page when searching
+        setCurrentPage(1);
     };
 
-    // Calculate the products to display based on the current page
+
     const indexOfLastProduct = currentPage * itemsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
     const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
-    // Calculate total pages
+
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
     return (
@@ -63,7 +67,7 @@ const ProductList: React.FC = () => {
                                 <p className="flex flex-col items-end">{(new Intl.NumberFormat("fa")).format(product.price || 0)} تومان</p>
                             </CardContent>
                             <CardFooter className="flex flex-col items-start">
-                                <Button variant={"socialT"}>جزئیات محصول</Button>
+                               <Link href={siteConfig.ROUTE.shop_detail.href.replace(":id" , index + indexOfFirstProduct )}> <Button variant={"socialT"}>مشاهده جزئیات</Button></Link>
                             </CardFooter>
                         </Card>
                     ))}
@@ -95,7 +99,7 @@ const ProductList: React.FC = () => {
                             <PaginationNext
                                 href="#"
                                 onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                                disabled={currentPage === totalPages} // Disable if on the last page
+                                disabled={currentPage === totalPages}
                             />
                         </PaginationItem>
                     </PaginationContent>

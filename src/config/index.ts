@@ -4,7 +4,7 @@ const API_URL = `${HOST}${API}`
 
 export type RouteType = {
 	href : string;
-	label: string;
+	label?: string;
 	icon?: any;
 	hidden?: boolean;
 };
@@ -37,7 +37,13 @@ export const siteConfig = {
             label:'فروشگاه',
             href:'/shop',
             icon:null
+        },
+        shop_detail :{
+            label:'',
+            href:'/shop/:id',
+            icon:null
         }
+
     }
 } as const
 

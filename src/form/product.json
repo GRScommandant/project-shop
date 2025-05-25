@@ -1,107 +1,164 @@
 [
   {
-    "name": "مانیتور 1",
+    "name": "LG Monitor 100hz 27inch IPS",
     "category": "مانیتور",
-    "brand": "Asus",
-    "amount": 20,
-    "description": "120 fps",
-    "price": 2500000,
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
-  },
-    {
-    "name": "مانیتور 1",
-    "category": "مانیتور",
-    "brand": "Asus",
-    "amount": 20,
-    "description": "120 fps",
-    "price": 2500000,
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
-  },
-    {
-    "name": "مانیتور 1",
-    "category": "مانیتور",
-    "brand": "Asus",
-    "amount": 20,
-    "description": "120 fps",
-    "price": 2500000,
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
-  },
-    {
-    "name": "مانیتور 1",
-    "category": "مانیتور",
-    "brand": "Asus",
-    "amount": 20,
-    "description": "120 fps",
-    "price": 2500000,
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
-  },
-    {
-    "name": "مانیتور 1",
-    "category": "مانیتور",
-    "brand": "Asus",
-    "amount": 20,
-    "description": "120 fps",
-    "price": 2500000,
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
-  },
-
-  {
-    "name": "مانیتور 2",
-    "category": "مانیتور",
-    "brand": "MSI",
-    "amount": 40,
-    "description": "320 fps",
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
     "amount": 30,
-    "description": "130 fps",
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
-    "name": "مانیتور4",
+    "name": "مانیتور3",
     "category": "مانیتور",
-    "brand": "shiaomi",
-    "amount": 50,
-    "description": "150 fps",
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
-    "name": "مانیتور4",
+    "name": "مانیتور3",
     "category": "مانیتور",
-    "brand": "shiaomi",
-    "amount": 50,
-    "description": "150 fps",
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
-
   {
-    "name": "مانیتور4",
+    "name": "مانیتور3",
     "category": "مانیتور",
-    "brand": "shiaomi",
-    "amount": 50,
-    "description": "150 fps",
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
-    "name": "مانیتور4",
+    "name": "مانیتور3",
     "category": "مانیتور",
-    "brand": "shiaomi",
-    "amount": 50,
-    "description": "150 fps",
-    "image": "assets/pic/34E6UC-2-1500x1500.jpg"
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
-
   {
-    "name": "intel core i7 11400",
-    "category": "cpu",
-    "brand": "Intel",
-    "amount": 10,
-    "description": "24mb cache",
-    "image": "assets/pic/Intel-14th-Gen-Core-Tray-1-300x300.jpg"
+    "name": "مانیتور3",
+    "category": "مانیتور",
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
+  },
+  {
+    "name": "مانیتور3",
+    "category": "مانیتور",
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
+  },
+  {
+    "name": "مانیتور3",
+    "category": "مانیتور",
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   }
-
 ]
