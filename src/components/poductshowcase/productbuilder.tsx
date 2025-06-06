@@ -11,6 +11,7 @@ import siteConfig from "@/config";
 
 
 interface Product {
+    id:number;
     name: string;
     category: string;
     brand: string;
@@ -19,12 +20,11 @@ interface Product {
     price?: number;
     image: string;
 }
-
 const ProductList: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState<string>("");
     const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
-    const [currentPage, setCurrentPage ] = useState<number>(1); // State for current page
-    const itemsPerPage = 5; // Number of items per page
+    const [currentPage, setCurrentPage ] = useState<number>(1);
+    const itemsPerPage = 10;
 
     const productList: Product[] = products;
 
@@ -50,9 +50,9 @@ const ProductList: React.FC = () => {
                 <div className="w-[80%] ml-[80px] mt-5">
                     <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={handleSearch} />
                 </div>
-                <div className="flex flex-wrap items-start pr-4 pl-4 pt-4 m-0 gap-2.5 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-1 max-w-7xl ">
                     {currentProducts.map((product, index) => (
-                        <Card className="flex flex-col w-[300px]" key={index}>
+                        <Card className="flex flex-col w-full" key={index}>
                             <CardHeader className="flex flex-col items-center justify-center w-[300px]">
                                 <img
                                     src={product.image}
@@ -67,7 +67,7 @@ const ProductList: React.FC = () => {
                                 <p className="flex flex-col items-end">{(new Intl.NumberFormat("fa")).format(product.price || 0)} تومان</p>
                             </CardContent>
                             <CardFooter className="flex flex-col items-start">
-                               <Link href={siteConfig.ROUTE.shop_detail.href.replace(":id" , index + indexOfFirstProduct )}> <Button variant={"socialT"}>مشاهده جزئیات</Button></Link>
+                                <Link href={siteConfig.ROUTE.shop_detail.href.replace(":id" ,  index + indexOfFirstProduct )}> <Button variant={"socialT"}>مشاهده جزئیات</Button></Link>
                             </CardFooter>
                         </Card>
                     ))}

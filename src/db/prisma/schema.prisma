@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  username  String   @unique
+  password  String
+  phone     String?
+  address   Address?
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Address {
+  id         String @id @default(uuid())
+  street     String
+  city       String
+  state      String
+  postalCode String
+  country    String
+  user       User   @relation(fields: [userId], references: [id])
+  userId     String @unique
+}
+
+model Component {
+  id         String   @id @default(uuid())
+  name       String
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+  price      Float
+  quantity   Int
+  status     Status   @default(IN_STOCK)
+  model      String?
+  serialNo   String?  @unique
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Category {
+  id         String      @id @default(uuid())
+  name       String      @unique
+  components Component[]
+}
+
+enum Status {
+  IN_STOCK
+  LOW_STOCK
+  OUT_OF_STOCK
+  DISCONTINUED
+}
+
+enum Role {
+  USER
+  ADMIN
+}

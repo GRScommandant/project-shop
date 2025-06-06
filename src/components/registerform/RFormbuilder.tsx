@@ -21,7 +21,7 @@ import { useRouter } from 'next/navigation'
 
 type FormBuilderProps = {
     form: FormType,
-    onsubmit?: (data: any) => void,
+    onSubmit?: (data: any) => Promise <void>
     onreset?: () => void
 }
 

@@ -1,13 +1,14 @@
 import products from "../../../form/product.json"
 import React from "react";
 import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger,} from "@/components/ui/tabs"
 import {Separator} from "@/components/ui/separator";
+import OtherProducts from "@/components/otherproducts/otherproducts";
 
 interface Product {
+    id : string;
     name: string;
     price: number;
-    image: string;
+    image?: string;
     description: Array<{ property: string; propertydes: string }>;
 }
 export default async function Page({
@@ -64,7 +65,7 @@ export default async function Page({
                        </>
                    ))}
                </div>
-
+                <OtherProducts/>
             </div>
         </>
     )

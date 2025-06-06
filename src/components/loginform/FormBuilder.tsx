@@ -92,7 +92,6 @@ import {FormFieldType, FormType} from "@/components/loginform/FormCard";
 import {useRouter} from "next/navigation";
 import {Alert} from "@/components/ui/Alert";
 import {useState} from "react";
-
 // const formSchema = z.object({
 //     username: z.string().min(3).max(32),
 //     password: z.string().min(8).max(128)
@@ -100,11 +99,11 @@ import {useState} from "react";
 
 type FormBuilderProps = {
     form: FormType
-    onSubmit?: (data: any) => void
+    onSubmit?: (data: any) => Promise <void>
     onReset?: () => void
 }
 
-export default function FormBuilder({form: form_config}: FormBuilderProps) {
+export default function FormBuilder({form: form_config , onSubmit}: FormBuilderProps) {
     const router = useRouter()
 
     const formSchema = z.object(
@@ -159,16 +158,18 @@ export default function FormBuilder({form: form_config}: FormBuilderProps) {
         resolver: zodResolver(formSchema),
     })
     const [AlertV , setAlertV ] = useState(false)
-    function onSubmit(values: z.infer<typeof formSchema>) {
+   async function onSubmitHandler(values: z.infer<typeof formSchema>) {
         try {
             console.log(values);
+            await onSubmit?.(values)
             setAlertV(true)
             setTimeout(() => {
                 router.push('/');
             }, 1500);
 
         } catch (error) {
-            console.error("دچار اختلال شده است");
+            console.error("دچار اختلال شده است" , error);
+
 
         }
     }
@@ -176,7 +177,7 @@ export default function FormBuilder({form: form_config}: FormBuilderProps) {
     return (
         <Form {...form}>
             {AlertV && <Alert variant={"successful"}>خوش آمدید</Alert>}
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10">
+            <form onSubmit={form.handleSubmit(onSubmitHandler)} className="space-y-8 max-w-3xl mx-auto py-10">
 
 
                 {(form_config.fields as FormFieldType[]).map((f, key) => {

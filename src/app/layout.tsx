@@ -5,6 +5,7 @@ import {ThemeProvider} from "next-themes";
 import {Direction} from "radix-ui";
 import {Navbar} from "@/components/navbar/navbar"
 import siteConfig from "@/config";
+import {AuthProvider} from "@/components/providers/auth-provider";
 
 
 // export const metadata: Metadata = {
@@ -19,17 +20,19 @@ export default function RootLayout({children}: Readonly<any>) {
         <html lang="en" suppressHydrationWarning dir={dir}>
         <head/>
         <body>
-        <Direction.Provider dir={dir}>
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-            >
+        <AuthProvider>
+            <Direction.Provider dir={dir}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
                 <Navbar dir={dir}/>
-                {children}
-            </ThemeProvider>
-        </Direction.Provider>
+                    {children}
+                </ThemeProvider>
+            </Direction.Provider>
+        </AuthProvider>
         </body>
         </html>
     )

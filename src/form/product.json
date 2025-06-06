@@ -1,5 +1,6 @@
 [
   {
+    "id" : 2,
     "name": "LG Monitor 100hz 27inch IPS",
     "category": "مانیتور",
     "brand": "samsung",
@@ -18,6 +19,26 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
+    "id" : 3,
+    "name": "LG Montior 120hz 2100x1080 IPS",
+    "category": "مانیتور",
+    "brand": "samsung",
+    "amount": 30,
+    "price":2500000,
+    "description":[
+      {
+        "property": "panel ",
+        "propertydes": "ips"
+      },
+      {
+        "property": "pixelpatch ",
+        "propertydes": "سلام"
+      }
+    ] ,
+    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
+  },
+  {
+    "id" : 4,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
@@ -36,6 +57,7 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
+    "id" : 5,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
@@ -54,6 +76,7 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
+    "id" : 1,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
@@ -72,6 +95,7 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
+    "id" : 6,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
@@ -90,6 +114,7 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
+    "id" : 7,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
@@ -108,6 +133,7 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
+    "id" : 8,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",
@@ -126,24 +152,7 @@
     "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
   },
   {
-    "name": "مانیتور3",
-    "category": "مانیتور",
-    "brand": "samsung",
-    "amount": 30,
-    "price":2500000,
-    "description":[
-      {
-        "property": "panel ",
-        "propertydes": "ips"
-      },
-      {
-        "property": "pixelpatch ",
-        "propertydes": "سلام"
-      }
-    ] ,
-    "image": "assets/pic/UltraGear-27GP750-B-1-1500x1500.jpg"
-  },
-  {
+    "id" : 9,
     "name": "مانیتور3",
     "category": "مانیتور",
     "brand": "samsung",

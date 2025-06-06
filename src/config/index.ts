@@ -38,13 +38,29 @@ export const siteConfig = {
             href:'/shop',
             icon:null
         },
+        dashboard :{
+            label:'داشبورد',
+            href:'/dashboard',
+            icon:null
+        },
         shop_detail :{
             label:'',
             href:'/shop/:id',
             icon:null
-        }
+        },
+
 
     }
+    ,
+    API_URL: API_URL,
+    API: {
+     login: {
+        url: `${API_URL}/auth/login`,
+        method: 'POST'
+     }
+    },
+
 } as const
+
 
 export default siteConfig;

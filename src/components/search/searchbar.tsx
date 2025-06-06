@@ -31,3 +31,4 @@ const SearchBar : React.FC<SearchbarProps> = ({searchQuery , setSearchQuery , on
     );
 }
 export default SearchBar;
+
