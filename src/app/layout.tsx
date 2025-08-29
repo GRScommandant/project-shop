@@ -20,7 +20,6 @@ export default function RootLayout({children}: Readonly<any>) {
         <html lang="en" suppressHydrationWarning dir={dir}>
         <head/>
         <body>
-        <AuthProvider>
             <Direction.Provider dir={dir}>
                 <ThemeProvider
                     attribute="class"
@@ -32,7 +31,6 @@ export default function RootLayout({children}: Readonly<any>) {
                     {children}
                 </ThemeProvider>
             </Direction.Provider>
-        </AuthProvider>
         </body>
         </html>
     )
