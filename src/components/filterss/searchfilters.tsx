@@ -26,11 +26,11 @@ const SearchFilters : React.FC = () => {
             <AccordionItem value="item1" className=" flex flex-col items-center justify-center w-[100%]">
                 <AccordionTrigger>برند ها</AccordionTrigger>
                     <AccordionContent>
-                        <ScrollArea className="h-full w-[240px] rounded-md border p-2">{UniqueBrands.map((brand , index)=>(
+                        <ScrollArea className="flex flex-col h-full w-[240px] rounded-md border p-2">{UniqueBrands.map((brand , index)=>(
                                 <>
                                     <div key={index} className="flex flex-row-reverse items-end w-[100%] gap-1.5 pb-1">
                                         <Checkbox id={`brand${index}`}/>
-                                        <Label htmlFor={`brand${index}`}>{brand}</Label>
+                                        <Label htmlFor={`brand${index}` }>{brand}</Label>
                                     </div>
                                     <Separator className="my-2 mx-0"/>
                                 </>

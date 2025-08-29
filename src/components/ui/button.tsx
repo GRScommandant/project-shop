@@ -22,6 +22,7 @@ const buttonVariants = cva(
           socialT:"bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700",
           socialW:"bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700",
           socialI:"bg-pink-500 text-white font-bold py-2 px-4 rounded hover:bg-pink-700",
+          Delete:"bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -23,11 +23,6 @@ export const siteConfig = {
             href: '/register',
             icon: null
         },
-        about: {
-            label: 'درباره ی ما',
-            href: '/about',
-            icon: null
-        },
         home: {
             label:'خانه',
             href:'/',

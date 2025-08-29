@@ -25,6 +25,13 @@ export default function ProductTable() {
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
+    const handleDelete = (e: React.FormEvent) => {
+        e.preventDefault()
+        console.log('')
+        console.log()
+
+
+    }
     return (
         <>
             <div className="w-full gap-2.5">
@@ -61,8 +68,8 @@ export default function ProductTable() {
                                     <TableCell>{product.name}</TableCell>
                                     <TableCell>{product.price}</TableCell>
                                     <TableCell className="text-right">{product.category}</TableCell>
-                                    <TableCell><Button>ویرایش</Button></TableCell>
-                                    <TableCell><Button>حذف</Button></TableCell>
+                                    <TableCell><Button variant={"socialW"}>ویرایش</Button></TableCell>
+                                    <TableCell><Button onClick={handleDelete} variant={"Delete"}>حذف</Button></TableCell>
                                 </TableRow>
                             ))}
 

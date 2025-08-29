@@ -49,6 +49,8 @@ export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
                     break;
                 case "password":
                     schema = z.string();
+                case "address":
+                    schema = z.string();
                     break;
                 default:
                     schema = z.string();
@@ -58,7 +60,7 @@ export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
             if (field.required) {
                 if (schema instanceof z.ZodString) {
                     schema = schema.min(1, {
-                        message: `${field.label} نیاز است `
+                        message: `${field.name}نیاز است `
                     });
                 }
             }
@@ -130,7 +132,9 @@ export default function RFormbuilder({ form: form_config }: FormBuilderProps) {
                             name={f.name}
                             render={({ field }) => (
                                 <FormItem className="space-y-0">
-                                    <FormLabel className="space-y-0">{f.label}</FormLabel>
+                                    <FormLabel className="mb-1.5">{f.label}</FormLabel>
+                                    <br/>
+                                    <br/>
                                     <FormControl className="space-y-0">
                                         <Field
                                             placeholder={f.placeholder}
